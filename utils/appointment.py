@@ -21,7 +21,7 @@ class AppointmentHelpers:
         appointment = appointments.get(appointment_id)
         if not appointment:
             raise HTTPException(
-                detail=' No appointment found', status_code=404)
+                detail=f'Appointment ID {appointment_id} not found', status_code=404)
         return appointment
 
     @staticmethod
